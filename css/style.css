@@ -1,0 +1,63 @@
+html, 
+body {
+	height: 100%;
+	margin: 0;
+}
+
+.chess-board {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	box-sizing: border-box;
+	width: 50%;
+	height: 80%;
+	padding: 0;
+	outline: 5px solid #000;
+	margin: auto;
+	list-style-type: none;
+
+	font-size: 0;
+	background-image: url('https://serg-casper.ru/wp-content/uploads/2015/03/13.jpg');
+}
+
+.chess-cell {
+	position: relative;
+
+	display: inline-block;
+	vertical-align: top;
+	width: 12.5%;
+	height: 12.5%;
+}
+
+.chess-cell:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	display: block;
+	width: 80%;
+	height: 80%;
+	border-radius: 50%;
+	margin: auto;
+}
+
+.black:after {
+	box-shadow: -5px -5px 20px 0;
+	background-color: #000;
+}
+
+.red:after {
+	box-shadow: 5px 5px 15px 0;
+	background-color: #f00;
+}
+
+.hidden:after { display: none; }
+
+.chess-cell.row1:nth-child(odd) { background-image: url('http://fora-ural.ru/images/phocagallery/oreh/thumbs/phoca_thumb_m_milanski_oreh_1024.jpg'); }
+.chess-cell.row2:nth-child(even) { background-image: url('http://fora-ural.ru/images/phocagallery/oreh/thumbs/phoca_thumb_m_milanski_oreh_1024.jpg'); }
